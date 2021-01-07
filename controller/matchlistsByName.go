@@ -7,7 +7,7 @@ import (
 	"github.com/labstack/echo"
 )
 
-func MatchByName(c echo.Context) error {
+func MatchlistsByName(c echo.Context) error {
 	name, startIndex, endIndex := c.Param("name"), c.QueryParam("startIndex"), c.QueryParam("endIndex")
 	summoner, _ := summoner.ByName(name)
 	match, err := match.ByAccountID(summoner.AccountID, startIndex, endIndex)

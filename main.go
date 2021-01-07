@@ -8,6 +8,6 @@ import (
 
 func main() {
 	e := echo.New()
-	e.GET("/match/:name", controller.MatchByName)
+	e.GET("/matchlists/:name", controller.MatchlistsByName)
 	e.Logger.Fatal(e.Start(":3000"))
 }
