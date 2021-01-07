@@ -16,7 +16,7 @@ func ByAccountID(accountID, startIndex, endIndex string) (Matchlists, error) {
 	riotKey := os.Getenv("RIOT_KEY")
 	resp, err := http.Get(riotURL + accountID + "?beginIndex=" + startIndex + "&endIndex=" + endIndex + "&api_key=" + riotKey)
 	if err != nil {
-		return matchlists, err
+		return matchlists, errors.New("API 요청을 통해 정보를 받아도는 중 에러 발생")
 	}
 	defer resp.Body.Close()
 	dec := json.NewDecoder(resp.Body)
