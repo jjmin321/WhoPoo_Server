@@ -14,7 +14,7 @@ func MatchByName(c echo.Context) error {
 	if err != nil {
 		return c.JSON(500, map[string]interface{}{
 			"status":  500,
-			"message": "라이엇 API 토큰 만료",
+			"message": err.Error(),
 		})
 	}
 	return c.JSON(200, map[string]interface{}{
