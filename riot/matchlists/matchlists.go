@@ -1,6 +1,6 @@
-package match
+package matchlists
 
-type Match struct {
+type Matchlists struct {
 	Matches    []Matches `json:"matches"`
 	StartIndex int       `json:"startIndex"`
 	EndIndex   int       `json:"endIndex"`

@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"WhoPoo_Server/riot/match"
+	"WhoPoo_Server/riot/matchlists"
 	"WhoPoo_Server/riot/summoner"
 
 	"github.com/labstack/echo"
@@ -10,7 +10,7 @@ import (
 func MatchlistsByName(c echo.Context) error {
 	name, startIndex, endIndex := c.Param("name"), c.QueryParam("startIndex"), c.QueryParam("endIndex")
 	summoner, _ := summoner.ByName(name)
-	match, err := match.ByAccountID(summoner.AccountID, startIndex, endIndex)
+	matchlists, err := matchlists.ByAccountID(summoner.AccountID, startIndex, endIndex)
 	if err != nil {
 		return c.JSON(500, map[string]interface{}{
 			"status":  500,
@@ -19,6 +19,6 @@ func MatchlistsByName(c echo.Context) error {
 	}
 	return c.JSON(200, map[string]interface{}{
 		"status": 200,
-		"result": match,
+		"result": matchlists,
 	})
 }
