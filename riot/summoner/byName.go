@@ -16,7 +16,7 @@ func ByName(user string) (Summoner, error) {
 	riotKey := os.Getenv("RIOT_KEY")
 	resp, err := http.Get(riotURL + user + "?api_key=" + riotKey)
 	if err != nil {
-		return summoner, errors.New("API 요청을 통해 정보를 받아도는 중 에러 발생")
+		return summoner, errors.New("API 요청을 통해 정보를 받아오는 중 에러 발생")
 	}
 	defer resp.Body.Close()
 	dec := json.NewDecoder(resp.Body)

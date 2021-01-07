@@ -16,7 +16,7 @@ func ByGameID(gameID string) (Matches, error) {
 	riotKey := os.Getenv("RIOT_KEY")
 	resp, err := http.Get(riotURL + gameID + "?api_key=" + riotKey)
 	if err != nil {
-		return matches, errors.New("API 요청을 통해 정보를 받아도는 중 에러 발생")
+		return matches, errors.New("API 요청을 통해 정보를 받아오는 중 에러 발생")
 	}
 	defer resp.Body.Close()
 	dec := json.NewDecoder(resp.Body)
