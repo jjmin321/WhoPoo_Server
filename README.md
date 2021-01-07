@@ -15,11 +15,17 @@ WHOPOO는 리그오브레전드 API를 사용하여 데이터를 정리하고 �
 
 ## API
 
+## /matches 
+    # 특정 게임 ID를 입력받아 해당 게임에 대한 정보를 반환해줌 
+
+    - Parameter 
+        - gameId (Required)
+
 ## /matchlists
     # 유저 이름을 입력받아 최근 게임 전적을 반환해줌
 
     - Parameter
-        - name (required)
+        - name (Required)
     - Query Parameter
         - startIndex (Optional)
         - endIndex (Optional)  
