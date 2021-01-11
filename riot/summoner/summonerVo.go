@@ -1,6 +1,6 @@
 package summoner
 
-type SummonerDto struct {
+type SummonerVo struct {
 	ID            string `json:"id"`
 	AccountID     string `json:"accountID"`
 	PuUID         string `json:"puuid"`
