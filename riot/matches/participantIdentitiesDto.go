@@ -6,12 +6,12 @@ type ParticipantIdentitiesDto struct {
 }
 
 type PlayerDto struct {
-	profileIcon       int    `json:"profileIcon"`
-	accountId         string `json:"accountId"`
-	matchHistoryUri   string `json:"matchHistoryUri"`
-	currentAccountId  string `json:"currentAccountId"`
-	currentPlatformId string `json:"currentPlatformId"`
-	summonerName      string `json:"summonerName"`
-	summonerId        string `json:"summonerId"`
-	platformId        string `json:"platformId"`
+	ProfileIcon       int    `json:"profileIcon"`
+	AccountId         string `json:"accountId"`
+	MatchHistoryUri   string `json:"matchHistoryUri"`
+	CurrentAccountId  string `json:"currentAccountId"`
+	CurrentPlatformId string `json:"currentPlatformId"`
+	SummonerName      string `json:"summonerName"`
+	SummonerId        string `json:"summonerId"`
+	PlatformId        string `json:"platformId"`
 }
