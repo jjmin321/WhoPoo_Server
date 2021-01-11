@@ -1,16 +1,16 @@
 package matches
 
 type ParticipantsDto struct {
-	ParticipantID             int            `json:"participantId"`
-	ChampionID                int            `json:"championId"`
-	TeamID                    int            `json:"teamId"`
-	Spell1                    int            `json:"spell1Id"`
-	Spell2                    int            `json:"spell2Id"`
-	HighestAchievedSeasonTier string         `json:"highestAchievedSeasonTier"`
-	Runes                     []RunesDto     `json:"runes"`
-	Stats                     []StatsDto     `json:"stats"`
-	Timeline                  []TimelineDto  `json:"timeline"`
-	Masteries                 []MasteriesDto `json:"masteries"`
+	ParticipantID             int          `json:"participantId"`
+	ChampionID                int          `json:"championId"`
+	TeamID                    int          `json:"teamId"`
+	Spell1                    int          `json:"spell1Id"`
+	Spell2                    int          `json:"spell2Id"`
+	HighestAchievedSeasonTier string       `json:"highestAchievedSeasonTier"`
+	Runes                     RunesDto     `json:"runes"`
+	Stats                     StatsDto     `json:"stats"`
+	Timeline                  TimelineDto  `json:"timeline"`
+	Masteries                 MasteriesDto `json:"masteries"`
 }
 
 type RunesDto struct {
@@ -132,16 +132,16 @@ type StatsDto struct {
 }
 
 type TimelineDto struct {
-	ParticipantID               int            `json:"participantId"`
-	CsDiffPerMinDeltas          map[string]int `json:"csDiffPerMinDeltas"`
-	DamageTakenPerMinDeltas     map[string]int `json:"damageTakenPerMinDeltas"`
-	Role                        string         `json:"role"`
-	DamageTakenDiffPerMinDeltas map[string]int `json:"damageTakenDiffPerMinDeltas"`
-	XpPerMinDeltas              map[string]int `json:"xpPerMinDeltas"`
-	XpDiffPerMinDeltas          map[string]int `json:"xpDiffPerMinDeltas"`
-	Lane                        string         `json:"lane"`
-	CreepsPerMinDeltas          map[string]int `json:"creepsPerMinDeltas"`
-	GoldPerMinDeltas            map[string]int `json:"goldPerMinDeltas"`
+	ParticipantID               int                `json:"participantId"`
+	CsDiffPerMinDeltas          map[string]float64 `json:"csDiffPerMinDeltas"`
+	DamageTakenPerMinDeltas     map[string]float64 `json:"damageTakenPerMinDeltas"`
+	Role                        string             `json:"role"`
+	DamageTakenDiffPerMinDeltas map[string]float64 `json:"damageTakenDiffPerMinDeltas"`
+	XpPerMinDeltas              map[string]float64 `json:"xpPerMinDeltas"`
+	XpDiffPerMinDeltas          map[string]float64 `json:"xpDiffPerMinDeltas"`
+	Lane                        string             `json:"lane"`
+	CreepsPerMinDeltas          map[string]float64 `json:"creepsPerMinDeltas"`
+	GoldPerMinDeltas            map[string]float64 `json:"goldPerMinDeltas"`
 }
 
 type MasteriesDto struct {

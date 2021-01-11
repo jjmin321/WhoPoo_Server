@@ -1,17 +1,17 @@
 package matches
 
 type ParticipantIdentitiesDto struct {
-	ParticipantID int         `json:"participantId"`
-	Player        []PlayerDto `json:"player"`
+	ParticipantID int       `json:"participantId"`
+	Player        PlayerDto `json:"player"`
 }
 
 type PlayerDto struct {
 	ProfileIcon       int    `json:"profileIcon"`
-	AccountId         string `json:"accountId"`
-	MatchHistoryUri   string `json:"matchHistoryUri"`
-	CurrentAccountId  string `json:"currentAccountId"`
-	CurrentPlatformId string `json:"currentPlatformId"`
+	AccountID         string `json:"accountId"`
+	MatchHistoryURI   string `json:"matchHistoryUri"`
+	CurrentAccountID  string `json:"currentAccountId"`
+	CurrentPlatformID string `json:"currentPlatformId"`
 	SummonerName      string `json:"summonerName"`
-	SummonerId        string `json:"summonerId"`
-	PlatformId        string `json:"platformId"`
+	SummonerID        string `json:"summonerId"`
+	PlatformID        string `json:"platformId"`
 }
