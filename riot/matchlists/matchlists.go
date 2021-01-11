@@ -1,13 +1,13 @@
 package matchlists
 
-type Matchlists struct {
-	Matches    []Matches `json:"matches"`
+type MatchlistsDto struct {
+	Matches    []MatchesDto `json:"matches"`
 	StartIndex int       `json:"startIndex"`
 	EndIndex   int       `json:"endIndex"`
 	TotalGames int       `json:"totalGames"`
 }
 
-type Matches struct {
+type MatchesDto struct {
 	PlatformID string `json:"platformId"`
 	GameID     int    `json:"gameId"`
 	Champion   int    `json:"champion"`

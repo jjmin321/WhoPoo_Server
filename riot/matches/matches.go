@@ -1,6 +1,6 @@
 package matches
 
-type Matches struct {
+type MatchesDto struct {
 	GameID       int     `json:"gameId"`
 	PlatformID   string  `json:"platformId"`
 	GameCreation int     `json:"gameCreation"`
@@ -11,10 +11,10 @@ type Matches struct {
 	GameVersion  string  `json:"gameVersion"`
 	GameMode     string  `json:"gameMode"`
 	GameType     string  `json:"gameType"`
-	Teams        []Teams `json:"teams"`
+	Teams        []TeamsDto `json:"teams"`
 }
 
-type Teams struct {
+type TeamsDto struct {
 	TeamID               int    `json:"teamId"`
 	Win                  string `json:"win"`
 	FirstBlood           bool   `json:"firstBlood"`
@@ -30,10 +30,10 @@ type Teams struct {
 	VilemawKills         int    `json:"vilemawKills"`
 	RiftHeraldKills      int    `json:"riftHeraldKills"`
 	DominionVictoryScore int    `json:"dominionVictoryScore"`
-	Bans                 []Bans `json:"bans"`
+	Bans                 []BansDto `json:"bans"`
 }
 
-type Bans struct {
+type BansDto struct {
 	ChampionID int `json:"championId"`
 	PickTurn   int `json:"pickTurn"`
 }
