@@ -9,8 +9,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func ByGameID(gameID string) (MatchesDto, error) {
-	var matches MatchesDto
+func ByGameID(gameID string) (MatchDto, error) {
+	var matches MatchDto
 	const riotURL = "https://kr.api.riotgames.com/lol/match/v4/matches/"
 	_ = godotenv.Load("secret.env")
 	riotKey := os.Getenv("RIOT_KEY")
