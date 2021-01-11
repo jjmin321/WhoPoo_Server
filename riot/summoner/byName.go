@@ -9,8 +9,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func ByName(user string) (SummonerDto, error) {
-	var summoner SummonerDto
+func ByName(user string) (SummonerVo, error) {
+	var summoner SummonerVo
 	const riotURL = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/"
 	err := godotenv.Load("secret.env")
 	riotKey := os.Getenv("RIOT_KEY")
