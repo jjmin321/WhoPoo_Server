@@ -1,10 +1,12 @@
 package matchlists
 
+import "time"
+
 type MatchlistsDto struct {
 	Matches    []MatchesDto `json:"matches"`
-	StartIndex int       `json:"startIndex"`
-	EndIndex   int       `json:"endIndex"`
-	TotalGames int       `json:"totalGames"`
+	StartIndex int          `json:"startIndex"`
+	EndIndex   int          `json:"endIndex"`
+	TotalGames int          `json:"totalGames"`
 }
 
 type MatchesDto struct {
@@ -14,6 +16,7 @@ type MatchesDto struct {
 	Queue      int    `json:"queue"`
 	Season     int    `json:"season"`
 	Timestamp  int    `json:"timestamp"`
+	Time       time.Time
 	Role       string `json:"role"`
 	Lane       string `json:"lane"`
 }
